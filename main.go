@@ -8,28 +8,32 @@ import (
 	"net/http"
 )
 
+func getTitle(html *string, element *colly.HTMLElement) {
+	*html += "\n<h2>\n"
+	*html += element.ChildText("div.timeline-head")
+	*html += "\n</h2>\n"
+}
+
+func getContent(html *string, element *colly.HTMLElement) {
+	element.ForEach("p", func(_ int, paragraph *colly.HTMLElement) {
+		*html += "\n<p>\n"
+		*html += paragraph.Text
+		*html += "\n</p>\n"
+	})
+}
+
 func main() {
 	c := colly.NewCollector()
 	html := ""
 
 	c.OnHTML("div.timeline-detail", func(e *colly.HTMLElement) {
-		html += "\n<h2>\n"
-		html += e.ChildText("div.timeline-head")
-		html += "\n</h2>\n"
-		e.ForEach("p", func(_ int, paragraph *colly.HTMLElement) {
-			html += "\n<p>\n"
-			html += paragraph.Text
-			html += "\n</p>\n"
-		})
+		getTitle(&html, e)
+		getContent(&html, e)
 	})
 
 	// Ignore unknown certificate
 	c.WithTransport(&http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-	})
-
-	c.OnRequest(func(r *colly.Request) {
-		fmt.Println("Visiting", r.URL)
 	})
 
 	c.Visit("https://ncov.moh.gov.vn/dong-thoi-gian")
