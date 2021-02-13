@@ -42,7 +42,7 @@ func main() {
 		fmt.Println("Something went wrong:", err)
 	})
 
-	err := ioutil.WriteFile("output.html", []byte(html), 0644)
+	err := ioutil.WriteFile("build/index.html", []byte(html), 0644)
 	if err != nil {
 		panic(err)
 	}
