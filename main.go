@@ -10,6 +10,8 @@ import (
 	"time"
 )
 
+var LastUpdated = time.Date(2000, time.January, 1, 1, 0, 0, 0, time.UTC) // Arbitrary time in the past
+
 // Parse scraped HTML element and return HTML text for the title
 func getTitleHTML(element *colly.HTMLElement) string {
 	title := element.ChildText("div.timeline-head")
@@ -38,6 +40,9 @@ func getMetaAtom(element *colly.HTMLElement) string {
 		fmt.Println("Error happened in parsing string:", err)
 	}
 	updated := t.Format(time.RFC3339)
+	if t.After(LastUpdated) {
+		LastUpdated = t
+	}
 	atom := fmt.Sprintf("<title>\n%s\n</title>\n", title)
 	atom += fmt.Sprintf("<id>https://huy-ngo.github.io/cov-news/index.html#%s</id>\n", id)
 	atom += fmt.Sprintf("<link>https://huy-ngo.github.io/cov-news/index.html#%s</link>\n", id)
@@ -55,25 +60,29 @@ func getContentAtom(element *colly.HTMLElement) string {
 	return content
 }
 
+// Parse scraped HTML element and return HTML for an entry
+func GetEntryHTML(element *colly.HTMLElement) string {
+	return getTitleHTML(element) + getContentHTML(element)
+}
+
 // Parse scraped HTML element and return Atom XML for an entry
-func getEntryAtom(element *colly.HTMLElement) string {
+func GetEntryAtom(element *colly.HTMLElement) string {
 	return fmt.Sprintf("<entry>\n%s%s</entry>\n", getMetaAtom(element), getContentAtom(element))
 }
 
 func main() {
 	c := colly.NewCollector()
 	html := `<a href="atom.xml">Atom Feed</a>`
-	atom := `<?xml version="1.0" encoding="utf-8"?>
+	atom_head := `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>Diễn biến dịch COVID-19</title>
 <link href="https://huy-ngo.github.io/cov-news/index.html"/>
 <id>https://huy-ngo.github.io/cov-news</id>`
-	// TODO: add updated field
+	atom := ""
 
 	c.OnHTML("div.timeline-detail", func(e *colly.HTMLElement) {
-		html += getTitleHTML(e)
-		html += getContentHTML(e)
-		atom += getEntryAtom(e)
+		html += GetEntryHTML(e)
+		atom += GetEntryAtom(e)
 	})
 
 	// Ignore unknown certificate
@@ -91,6 +100,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	updated := LastUpdated.Format(time.RFC3339)
+	atom_head += fmt.Sprintf("<updated>%s</updated>\n", updated)
+	atom = atom_head + atom
 	atom += "</feed>"
 	err = ioutil.WriteFile("build/atom.xml", []byte(atom), 0644)
 	if err != nil {
