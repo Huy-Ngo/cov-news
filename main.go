@@ -8,27 +8,31 @@ import (
 	"net/http"
 )
 
-func getTitle(html *string, element *colly.HTMLElement) {
-	*html += "\n<h2>\n"
-	*html += element.ChildText("div.timeline-head")
-	*html += "\n</h2>\n"
+func getTitleHTML(element *colly.HTMLElement) string {
+	html := "\n<h2>\n"
+	html += element.ChildText("div.timeline-head")
+	html += "\n</h2>\n"
+	return html
 }
 
-func getContent(html *string, element *colly.HTMLElement) {
+func getContentHTML(element *colly.HTMLElement) string {
+	html := ""
 	element.ForEach("p", func(_ int, paragraph *colly.HTMLElement) {
-		*html += "\n<p>\n"
-		*html += paragraph.Text
-		*html += "\n</p>\n"
+		html += "\n<p>\n"
+		html += paragraph.Text
+		html += "\n</p>\n"
 	})
+	return html
 }
 
 func main() {
 	c := colly.NewCollector()
-	html := ""
+	html := "<a href=\"#\">Atom Feed</a>"
+	// atom := "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">"
 
 	c.OnHTML("div.timeline-detail", func(e *colly.HTMLElement) {
-		getTitle(&html, e)
-		getContent(&html, e)
+		html += getTitleHTML(e)
+		html += getContentHTML(e)
 	})
 
 	// Ignore unknown certificate
