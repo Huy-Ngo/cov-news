@@ -2,16 +2,52 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>Diễn biến dịch COVID-19</title>
 <link href="https://huy-ngo.github.io/cov-news/index.html"/>
-<id>https://huy-ngo.github.io/cov-news</id><updated>2021-06-04T05:45:00+07:00</updated>
+<id>https://huy-ngo.github.io/cov-news</id><updated>2021-06-04T12:06:00+07:00</updated>
+<entry>
+<title>
+12:06 04/06/2021
+</title>
+<id>https://huy-ngo.github.io/cov-news/index.html#120604062021</id>
+<link href="https://huy-ngo.github.io/cov-news/index.html#120604062021"/>
+<updated>2021-06-04T12:06:00+07:00</updated>
+<content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
+<p>
+
+</p>
+
+<p>
+THÔNG BÁO VỀ 80 CA MẮC MỚI (BN8116-8195)
+</p>
+
+<p>
+Ghi nhận trong nước tại Bắc Giang (44), Bắc Ninh (23), TP. Hồ Chí Minh (11), Hà Nội (2).
+ 
+- CA BỆNH BN8116, BN8128-BN8131, BN8133, BN8140, BN8145, BN8151, BN8153-BN8163, BN8165, BN8167, BN8172, BN8175-BN8195 ghi nhận tại tỉnh Bắc Giang trong khu cách ly và khu vực đã được phong tỏa, liên quan đến công nhân làm tại các khu công nghiệp. Kết quả xét nghiệm dương tính với SARS-CoV-2. 
+</p>
+
+<p>
+- CA BỆNH BN8117-BN8127 ghi nhận tại TP. Hồ Chí Minh: 9 ca liên quan đến Hội thánh Truyền giáo Phục Hưng, 2 ca đang điều tra dịch tễ. Kết quả xét nghiệm dương tính với SARS-CoV-2.
+</p>
+
+<p>
+- CA BỆNH BN8132, BN8134-BN8139, BN8141-BN8144, BN8146-BN8150, BN8152, BN8164, BN8166, BN8168-BN8169, BN8171, BN8173 ghi nhận tại tỉnh Bắc Ninh: 3 ca là F1, 8 ca liên quan ổ dịch Khu công nghiệp Khắc Niệm, 6 ca liên quan ổ dịch Thuận Thành, 3 ca liên quan Khu công nghiệp Quang Châu, 3 ca liên quan Khu công nghiệp Vân Trung; đã cách ly từ trước. Kết quả xét nghiệm ngày 03/6/2021 dương tính với SARS-CoV-2. 
+</p>
+
+<p>
+- CA BỆNH BN8170, BN8174 ghi nhận tại TP. Hà Nội: là các F1, liên quan ổ dịch Công ty T&amp;T, đã cách ly từ trước. Kết quả xét nghiệm ngày 04/6/2021 dương tính với SARS-CoV-2.
+</p>
+
+<p>
+
+</p>
+</content></entry>
 <entry>
 <title>
 05:45 04/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#054504062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#054504062021</link>
-<updated>
-2021-06-04T05:45:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#054504062021"/>
+<updated>2021-06-04T05:45:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -50,10 +86,8 @@ Ghi nhận trong nước tại Bắc Giang (35), Bắc Ninh (14), Hà 
 18:00 03/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#180003062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#180003062021</link>
-<updated>
-2021-06-03T18:00:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#180003062021"/>
+<updated>2021-06-03T18:00:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -101,10 +135,8 @@ b. 79 ca ghi nhận trong nước
 12:26 03/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#122603062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#122603062021</link>
-<updated>
-2021-06-03T12:26:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#122603062021"/>
+<updated>2021-06-03T12:26:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -152,7 +184,7 @@ b. 96 ca ghi nhận trong nước
 </p>
 
 <p>
-- CA BỆNH BN7901, BN7904, BN7919, BN7922, BN7930, BN7932 ghi nhận tại TP. Hà Nội: 4 ca F1 liên quan đến ổ dịch Công ty T&T, 2 ca F1 liên quan ổ dịch Khu công nghiệp Quang Châu, Bắc Giang; đã cách ly từ trước. Kết quả xét nghiệm ngày 02-03/6/2021 dương tính với SARS-CoV-2. 
+- CA BỆNH BN7901, BN7904, BN7919, BN7922, BN7930, BN7932 ghi nhận tại TP. Hà Nội: 4 ca F1 liên quan đến ổ dịch Công ty T&amp;T, 2 ca F1 liên quan ổ dịch Khu công nghiệp Quang Châu, Bắc Giang; đã cách ly từ trước. Kết quả xét nghiệm ngày 02-03/6/2021 dương tính với SARS-CoV-2. 
 </p>
 
 <p>
@@ -168,10 +200,8 @@ b. 96 ca ghi nhận trong nước
 05:59 03/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#055903062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#055903062021</link>
-<updated>
-2021-06-03T05:59:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#055903062021"/>
+<updated>2021-06-03T05:59:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -223,10 +253,8 @@ b. 56 ca ghi nhận trong nước
 18:37 02/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#183702062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#183702062021</link>
-<updated>
-2021-06-02T18:37:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#183702062021"/>
+<updated>2021-06-02T18:37:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -287,10 +315,8 @@ b. 128 ca ghi nhận trong nước
 12:00 02/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#120002062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#120002062021</link>
-<updated>
-2021-06-02T12:00:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#120002062021"/>
+<updated>2021-06-02T12:00:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -338,10 +364,8 @@ b. 48 ca ghi nhận trong nước
 06:12 02/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#061202062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#061202062021</link>
-<updated>
-2021-06-02T06:12:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#061202062021"/>
+<updated>2021-06-02T06:12:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -376,10 +400,8 @@ Ghi nhận trong nước tại Bắc Giang (48), Bắc Ninh (3), Hà N
 18:26 01/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#182601062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#182601062021</link>
-<updated>
-2021-06-01T18:26:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#182601062021"/>
+<updated>2021-06-01T18:26:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -428,10 +450,8 @@ b. 89 ca ghi nhận trong nước
 12:10 01/06/2021
 </title>
 <id>https://huy-ngo.github.io/cov-news/index.html#121001062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#121001062021</link>
-<updated>
-2021-06-01T12:10:00+07:00
-</updated>
+<link href="https://huy-ngo.github.io/cov-news/index.html#121001062021"/>
+<updated>2021-06-01T12:10:00+07:00</updated>
 <content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
 <p>
 
@@ -450,44 +470,6 @@ Ghi nhận trong nước tại Bắc Giang (32), Bắc Ninh (9), Lạng
 - CA BỆNH BN7445 ghi nhận tại tỉnh Long An: nam, 22 tuổi, địa chỉ tại huyện Cần Đước, Long An; đang được điểu tra dịch tễ. Kết quả xét nghiệm ngày 31/5/2021 dương tính với SARS-CoV-2. Hiện đang được cách ly, điều trị tại Bệnh viện Nhiệt Đới TP. Hồ Chí Minh.
 - CA BỆNH BN7433, BN7442-BN7444, BN7446-BN7458, BN7466-BN7474, BN7477-BN7482 ghi nhận tại tỉnh Bắc Giang trong khu cách ly và khu vực đã được phong tỏa, liên quan đến công nhân làm tại các khu công nghiệp. Kết quả xét nghiệm dương tính với SARS-CoV-2.
 - CA BỆNH BN7459-BN7465, BN7475-BN7476 ghi nhận tại tỉnh Bắc Ninh: 2 ca F1, 2 ca sàng lọc ho sốt, 3 ca liên quan ổ dịch Thuận Thành, 2 liên quan ổ dịch Khu công nghiệp Khắc Niệm. Kết quả xét nghiệm dương tính với SARS-CoV-2.
-</p>
-
-<p>
-
-</p>
-</content></entry>
-<entry>
-<title>
-06:00 01/06/2021
-</title>
-<id>https://huy-ngo.github.io/cov-news/index.html#060001062021</id>
-<link>https://huy-ngo.github.io/cov-news/index.html#060001062021</link>
-<updated>
-2021-06-01T06:00:00+07:00
-</updated>
-<content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">
-<p>
-
-</p>
-
-<p>
-THÔNG BÁO VỀ 111 CA MẮC MỚI (BN7322-7432)
-</p>
-
-<p>
-Ghi nhận trong nước tại TP. Hồ Chí Minh (51), Bắc Giang (45), Bắc Ninh (15).
-</p>
-
-<p>
-- CA BỆNH BN7322-BN7324, BN7326-BN7331, BN7333-BN7335, BN7338-BN7340 ghi nhận tại tỉnh Bắc Ninh: là các trường hợp F1. Kết quả xét nghiệm dương tính với SARS-CoV-2.
-</p>
-
-<p>
-- CA BỆNH BN7325, BN7332, BN7336-BN7337, BN7341-BN7381 ghi nhận tại tỉnh Bắc Giang trong khu cách ly và khu vực đã được phong tỏa, liên quan đến công nhân làm tại các khu công nghiệp. Kết quả xét nghiệm dương tính với SARS-CoV-2.
-</p>
-
-<p>
-- CA BỆNH BN7382-BN7432 ghi nhận tại TP. Hồ Chí Minh: là các trường hợp liên quan đến Hội thánh Truyền giáo Phục Hưng. Kết quả xét nghiệm dương tính với SARS-CoV-2.
 </p>
 
 <p>
