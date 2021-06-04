@@ -4,6 +4,7 @@ import (
 	"crypto/tls"
 	"fmt"
 	"github.com/gocolly/colly"
+	"html"
 	"io/ioutil"
 	"net/http"
 	"regexp"
@@ -15,6 +16,7 @@ var LastUpdated = time.Date(2000, time.January, 1, 1, 0, 0, 0, time.UTC) // Arbi
 // Parse scraped HTML element and return HTML text for the title
 func getTitleHTML(element *colly.HTMLElement) string {
 	title := element.ChildText("div.timeline-head")
+	title = html.EscapeString(title)
 	re := regexp.MustCompile("[^A-Za-z0-9]")
 	id := re.ReplaceAll([]byte(title), []byte(""))
 	return fmt.Sprintf("\n<h2 id=\"%s\">\n%s\n</h2>\n", id, title)
@@ -22,11 +24,13 @@ func getTitleHTML(element *colly.HTMLElement) string {
 
 // Parse scraped HTML element and return HTML text for the content
 func getContentHTML(element *colly.HTMLElement) string {
-	html := ""
+	htm := ""
 	element.ForEach("p", func(_ int, paragraph *colly.HTMLElement) {
-		html += fmt.Sprintf("\n<p>\n%s\n</p>\n", paragraph.Text)
+		bare := paragraph.Text
+		text := html.EscapeString(bare)
+		htm += fmt.Sprintf("\n<p>\n%s\n</p>\n", text)
 	})
-	return html
+	return htm
 }
 
 // Parse scraped HTML element and return Atom XML for the metadata
@@ -45,8 +49,8 @@ func getMetaAtom(element *colly.HTMLElement) string {
 	}
 	atom := fmt.Sprintf("<title>\n%s\n</title>\n", title)
 	atom += fmt.Sprintf("<id>https://huy-ngo.github.io/cov-news/index.html#%s</id>\n", id)
-	atom += fmt.Sprintf("<link>https://huy-ngo.github.io/cov-news/index.html#%s</link>\n", id)
-	atom += fmt.Sprintf("<updated>\n%s\n</updated>\n", updated)
+	atom += fmt.Sprintf("<link href=\"https://huy-ngo.github.io/cov-news/index.html#%s\"/>\n", id)
+	atom += fmt.Sprintf("<updated>%s</updated>\n", updated)
 	return atom
 }
 
@@ -54,7 +58,9 @@ func getMetaAtom(element *colly.HTMLElement) string {
 func getContentAtom(element *colly.HTMLElement) string {
 	content := `<content type="xhtml" xml:lang="en" xml:base="http://diveintomark.org/">`
 	element.ForEach("p", func(_ int, paragraph *colly.HTMLElement) {
-		content += fmt.Sprintf("\n<p>\n%s\n</p>\n", paragraph.Text)
+		bare := paragraph.Text
+		text := html.EscapeString(bare)
+		content += fmt.Sprintf("\n<p>\n%s\n</p>\n", text)
 	})
 	content += "</content>"
 	return content
